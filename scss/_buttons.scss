@@ -1,0 +1,36 @@
+a{
+    &.text-link{
+        position: relative;
+        display: inline-block;
+        &:after{
+            content: "";
+            display: block;;
+            height: 3px;
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            background-color: $c-yellow;
+            transform: translateY(-5px);
+            transition: all 0.2s ease;
+        }
+        &:hover, &:focus{
+            &:after{
+                height: calc(100% - 10px);
+                transform: translateY( calc(-100% - 4px) );
+            }
+        }
+    }
+    &.btn{
+        padding-top: 22px;
+    }
+}
+.btn{
+    min-width: 240px;
+    height: 70px;
+    transition: all 0.2s ease-out;
+    &:hover, &:focus{
+        background-color: $c-yellow-light;
+        border-color: $c-yellow-light;
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+    }
+}

@@ -1,0 +1,122 @@
+html{
+    font-size:  16px;
+}
+
+*{
+    &::selection {
+        background: $c-yellow;
+    }
+    &::-moz-selection {
+        background: $c-yellow;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6  {
+    margin-top: 0px;
+    text-rendering: optimizeLegibility;
+}
+
+h1{
+    font-family: $f-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 1.3;
+    letter-spacing: 0px;
+    &.display-1{
+        font-family: $f-serif;
+        font-weight: 700;
+        font-size: 5.25rem;
+        line-height: 1;
+        letter-spacing: -1.5px;
+    }
+}
+
+h2{
+    font-family: $f-serif;
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+}
+
+h3{
+    font-family: $f-sans-serif-med;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    letter-spacing: 0.1px;
+}
+
+h4{
+    font-family: $f-sans-serif-med;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.57px;
+}
+
+h5{
+    font-family: $f-sans-serif-med;
+    font-size: 0.75rem;
+    line-height: 14px;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+}
+
+blockquote{
+    border-left: 0px;
+    padding: 0px;
+    margin: 0px;
+    p{
+        font-family: $f-serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1.875rem;
+        line-height: 1.6;
+        letter-spacing: -0.1px;
+    }
+}
+
+p{
+    font-family: $f-sans-serif-reg;
+    font-size: 1rem;
+    line-height: 1.875;
+    letter-spacing: 0.2px;
+    &.lead{
+        font-family: $f-serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1.7rem;
+        line-height: 1.75;
+        letter-spacing: -0.1px;
+        small{
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+    }
+    &.caption{
+        font-family: $f-serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 0.938rem;
+        line-height: 1.6;
+        letter-spacing: 0px;
+        color: #7b7b7b;
+    }
+    &.sub-title{
+        font-family: $f-sans-serif-reg;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        letter-spacing: 0.2px;
+        color: #7b7b7b;
+    }
+    &.by-line{
+        font-family: $f-sans-serif-reg;
+        font-size: 0.875rem;
+        line-height: 1.7;
+        letter-spacing: 0.16px;
+    }
+}

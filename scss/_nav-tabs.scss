@@ -1,0 +1,20 @@
+.nav-tabs{
+    > li{
+        margin-bottom: 0px;
+        a{
+            font-size: 1.25rem;
+            color: $c-grey-light;
+            font-family: $f-sans-serif-med;
+            letter-spacing: 0.1px;
+            &:hover, &focus{
+                border-color: $c-white;
+                color: $c-grey;
+            }
+        }
+        &:first-child{
+            a{
+                padding-left: 0px;
+            }
+        }
+    }
+}

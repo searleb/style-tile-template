@@ -1,0 +1,78 @@
+@section('style-guide-forms')
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="title">Forms</h1>
+            </div>
+        </div>
+        <form>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="first-name">First name</label>
+                        <input type="text" class="form-control" id="first-name">
+                        <p class="help-block">Username is required</p>
+                    </div>
+
+                    <div class="form-group error">
+                        <label for="first-name-2">First name</label>
+                        <input type="text" class="form-control" id="first-name-2">
+                        <p class="help-block">Username is required</p>
+                    </div>
+
+                    <div class="form-group disabled">
+                        <label for="first-name-3">First name</label>
+                        <input type="text" class="form-control" id="first-name-3" disabled>
+                        <p class="help-block">Username is required</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="invisible">Select Colour</label>
+                        <select class="form-control">
+                            <option value="option">Black</option>
+                            <option value="option">Blonde</option>
+                            <option value="option">Brown</option>
+                            <option value="option">Red</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="invisible">Choose quantity</label>
+                        <div class="form-counter">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <button id="count-down" type="button" class="btn js-form-counter--down" data-for-input="counter-1">-</button>
+                                </span>
+                                <input type="number" class="form-control" value="0" id="counter-1">
+                                <span class="input-group-addon">
+                                    <button id="count-up" type="button" class="btn js-form-counter--up" data-for-input="counter-1">+</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox custom-control custom-checkbox">
+                            <label>
+                                <input type="checkbox">
+                                <span class="custom-control-indicator"></span>
+                                Check this custom checkbox
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="radio custom-control custom-radio">
+                            <label>
+                                <input type="radio" id="radio1" name="radio">
+                                <span class="custom-control-indicator"></span>
+                                Toggle this custom radio
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+@show

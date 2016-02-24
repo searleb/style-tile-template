@@ -1,0 +1,278 @@
+.form-control{
+    box-shadow: none;
+}
+label{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: $f-sans-serif-bold;
+    letter-spacing: 0.9px;
+    line-height: 24px;
+    margin-left: 12px;
+    &.invisible{
+        visibility: hidden;
+    }
+}
+input, select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border: 2px solid $c-grey-lighter;
+    font-size: 20px;
+    letter-spacing: 0.2px;
+    &:hover, &:focus{
+        box-shadow: none;
+    }
+    &:focus{
+        border-color: $c-yellow;
+    }
+}
+select{
+    background-color: $c-grey-lightest;
+    // TODO: custom caret icon
+}
+.help-block{
+    color: $c-error;
+    display: none;
+    margin-left: 12px;
+}
+&.error{
+    input{
+        border-color: $c-error;
+    }
+    .help-block{
+        display: block;
+    }
+}
+&.disabled{
+    label{
+        color: $c-grey-light;
+    }
+}
+
+.form-control{
+    &[disabled], &[readonly]{
+        background-color: $c-white;
+    }
+}
+
+.form-counter{
+    width: 154px;
+    .input-group-addon{
+        background-color: $c-white;
+        padding: 0px;
+        width: 40px;
+        .btn{
+            width: 100%;
+            height: 58px;
+            min-width: 40px;
+            background-color: $c-white;
+        }
+    }
+    input{
+        border-width: 1px;
+        text-align: center;
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button{
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+}
+
+// Customize existing form controls
+//
+// Overrides Bootstrap defaults.
+
+// Custom select menu
+//
+// Add the class to the `<select>`.
+//
+// TODO: Get base64 svg for custom backgrounds and change colours
+
+
+.custom-select {
+    display: inline-block;
+    padding: 0px;
+    font-size: 16px;
+    line-height: 1;
+    color: $c-yellow;
+    vertical-align: middle;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC) no-repeat right 10px center;
+    background-color: $c-white;
+    background-clip: padding-box;
+    background-size: 8px 10px;
+    border: 1px solid $c-grey-lighter;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    appearance: none;
+
+    // Unfuck IE9 custom selects which otherwise display our custom arrows along
+    // the default buttony-arrow doodad.
+    // background-image: none;
+    // padding-right: 0px;
+
+    // Customize the `:focus` state to imitate native WebKit styles.
+    // .form-control-focus();
+
+    // Disabled state
+
+    &:disabled {
+        background-color: $c-grey-lighter;
+        cursor: not-allowed;
+    }
+}
+
+.custom-select-sm {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+
+//
+// Custom checkboxes and radios
+//
+
+.custom-control {
+    > label {
+        padding-left: 20px;
+        font-weight: normal;
+        text-transform: none;
+        font-family: $f-sans-serif-reg;
+        font-size: 1rem;
+        line-height: 1.2;
+        letter-spacing: 0.2px;
+    }
+
+    &.radio-inline,
+    &.checkbox-inline {
+        padding-left: 25px;
+
+        > label {
+            padding-left: 0;
+        }
+    }
+}
+
+.custom-control input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1; /* Put the input behind the label so it doesn't overlay text */
+}
+
+.custom-control-indicator {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    display: block;
+    width:  18px;
+    height: 18px;
+    text-align: center;
+    background-color: $c-white;
+    background-clip: padding-box;
+    background-size: 75% 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid $c-grey-lighter;
+    box-shadow: none;
+    user-select: none;
+}
+
+
+/* Hover state */
+/* Uncomment if you need it, but be aware of the sticky iOS states.
+.control:hover .control-indicator {
+background-color: #ccc;
+}
+*/
+
+/* Focus */
+.custom-control input:focus ~ .custom-control-indicator {
+    box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem $c-yellow;
+}
+
+/* Checked state */
+.custom-control input:checked ~ .custom-control-indicator {
+    background-color: $c-yellow;
+    border-color: $c-grey-lighter;
+    box-shadow: none;
+}
+
+/* Active */
+.custom-control input:active ~ .custom-control-indicator {
+    background-color: $c-yellow;
+    border-color: $c-yellow;
+    box-shadow: none;
+}
+
+// Disabled
+.custom-control input:disabled ~ .custom-control-indicator {
+    background-color: $c-yellow;
+    border-color: $c-yellow;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+/* Checkbox modifiers */
+.form-horizontal .custom-control-indicator {
+    margin-top: 10px;
+}
+.custom-checkbox .custom-control-indicator {
+    border-radius: .33rem;
+}
+.custom-checkbox input:checked ~ .custom-control-indicator {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=);
+}
+
+/* Radio modifiers */
+.custom-radio .custom-control-indicator {
+    border-radius: 50%;
+}
+.custom-radio input:checked ~ .custom-control-indicator {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==);
+}
+
+/* Alternately, use another character */
+.custom-control-x input:checked ~ .custom-control-indicator {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iOHB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDggOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgOCA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xLjQsMEwwLDEuNGwwLjcsMC43bDEuOCwxLjhMMC43LDUuN0wwLDYuNGwxLjQsMS40bDAuNy0wLjdsMS44LTEuOGwxLjgsMS44bDAuNywwLjdsMS40LTEuNEw3LjEsNS43DQoJTDUuMywzLjlsMS44LTEuOGwwLjctMC43TDYuNCwwTDUuNywwLjdMMy45LDIuNUwyLjEsMC43QzIuMSwwLjcsMS40LDAsMS40LDB6Ii8+DQo8L3N2Zz4NCg==);
+}
+.custom-control-dash input:checked ~ .custom-control-indicator {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iOHB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDggOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgOCA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0wLDN2Mmg4VjNIMHoiLz4NCjwvc3ZnPg0K);
+}
+
+// Custom control layout
+
+.custom-controls-inline {
+    .custom-control + .custom-control {
+        margin-left: 20px;
+    }
+}
+
+.custom-control-stacked {
+    .custom-control:after {
+        display: block;
+        content: "";
+    }
+}
+
+// highlevel form overrides
+// originally intorduced by dashboard toolkit
+.radio-inline,
+.checkbox-inline {
+    position: relative;
+
+    label {
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+}
+
+.form-control {
+    transition: none;
+
+    &:focus {
+        color: $gray-base;
+        background-color: #fff;
+        box-shadow: none;
+    }
+}

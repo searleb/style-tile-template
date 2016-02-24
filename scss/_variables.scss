@@ -1,0 +1,44 @@
+// Color vairables
+
+$c-yellow:             #ffe21d;
+$c-yellow-light:       #fbea82;
+$c-yellow-lighter:     #fef9d4;
+$c-grey:               #7b7b7b;
+$c-grey-light:         #c2c2c2;
+$c-grey-lighter:       #eaeaea;
+$c-grey-lightest:      #f3f3f3;
+$c-black:              #222222;
+$c-white:              #ffffff;
+$c-error:              #ff441d;
+
+//  Color map for use in loops - see style-guide
+$colors:(
+    yellow:             #ffe21d,
+    yellow-light:       #fbea82,
+    yellow-lighter:     #fef9d4,
+    grey:               #7b7b7b,
+    grey-light:         #c2c2c2,
+    grey-lighter:       #eaeaea,
+    grey-lightest:      #f3f3f3,
+    black:              #222222,
+    white:              #ffffff,
+);
+
+
+// Typography
+$f-sans-serif-reg: 'Brandon Text W01 Regular';
+$f-sans-serif-reg-italic: 'Brandon Text W01 Regular It';
+$f-sans-serif-med: 'Brandon Text W01 Medium';
+$f-sans-serif-bold: 'Brandon Text W01 Bold';
+$f-sans-serif-bold-italic: 'Brandon Text W01 Black Italic';
+$f-serif: 'Playfair Display'; // 400,700,400italic'
+
+
+// Media queries: http://getbootstrap.com/css/#grid-media-queries
+$media-xs: '(max-width:767px)';
+$media-sm: '(min-width:768px)';
+$media-md: '(min-width:992px)';
+$media-lg: '(min-width:1200px)';
+// Usage - interpolate the variable
+    // @media #{$media-md}{
+    // }

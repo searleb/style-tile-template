@@ -1,0 +1,34 @@
+#style-guide{
+    margin-bottom: 100px;
+    h1{
+        &.title{
+            border-bottom: 1px solid #f3f3f3;
+            padding-bottom: 10px;
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+    }
+
+    .colour-tile{
+        text-align: center;
+        margin-bottom: 30px;
+        .colour__swatch{
+            display: block;
+            margin: auto;
+            width: 180px;
+            height: 180px;
+            margin-bottom: 15px;
+            border-radius: 180px;
+            border: 1px solid #f3f3f3;
+            @each $color-name, $color-hex in $colors{
+                &.#{$color-name}{
+                    background-color: #{$color-hex};
+                }
+            }
+        }
+    }
+
+    .type-row{
+        margin: 40px 0px;
+    }
+}
